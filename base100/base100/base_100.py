@@ -60,3 +60,18 @@ profit = 120000
 print(list(calculateProfit(profit,0,superprofit,royaltyRate)))
 
 
+# 3. 一个整数，它加上100和加上268后都是一个完全平方数，请问该数是多少？
+# 思路：假设为x 则 x+i与x+268都可以开平方
+# 安装NumPy科学计算库：pip install NumPy
+
+import numpy
+def getSqrt(endNum):
+
+    for x in range(endNum):
+        d1 = int(numpy.sqrt(x+100))
+        d2 = int(numpy.sqrt(x+268))
+
+        if((numpy.square(d1) == (x+100)) and (numpy.square(d2) == (x+268))):
+            yield x
+
+print(list(getSqrt(10000)))
