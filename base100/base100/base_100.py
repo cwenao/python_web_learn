@@ -75,3 +75,22 @@ def getSqrt(endNum):
             yield x
 
 print(list(getSqrt(10000)))
+
+
+# 4. 输入某年某月某日，判断这一天是这一年的第几天？
+# 思路: 内置datetime进行日期格式转换与输出
+# 如果手写则需要判断闰月
+
+from datetime import datetime
+
+inputtime = input()
+
+def getTheDaythForInput(inputtime):
+
+    dateStr = datetime.strptime(inputtime, '%Y-%m-%d')
+
+    date = datetime.date(dateStr)
+
+    print(date.strftime('%j'))
+
+getTheDaythForInput(inputtime)
