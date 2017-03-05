@@ -83,7 +83,7 @@ print(list(getSqrt(10000)))
 
 from datetime import datetime
 
-inputtime = input()
+#inputtime = input()
 
 def getTheDaythForInput(inputtime):
 
@@ -93,4 +93,14 @@ def getTheDaythForInput(inputtime):
 
     print(date.strftime('%j'))
 
-getTheDaythForInput(inputtime)
+# getTheDaythForInput(inputtime)
+
+# 5. 题目：输入三个整数x,y,z，请把这三个数由小到大输出。
+# 思路：利用list的sort
+
+lstr = input()
+
+l = lstr.split(",")
+l.sort()
+
+print(l)
