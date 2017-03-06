@@ -98,9 +98,26 @@ def getTheDaythForInput(inputtime):
 # 5. 题目：输入三个整数x,y,z，请把这三个数由小到大输出。
 # 思路：利用list的sort
 
-lstr = input()
-
+#lstr = input()
+lstr = '1,3,5,2'
 l = lstr.split(",")
 l.sort()
 
 print(l)
+
+# 6. 题目：斐波那契数列
+
+def fib(max):
+
+    n,a,b = 0,0,1
+    while n<max:
+        yield b
+        a,b=b,a+b
+        n= n+1
+    return 'done'
+
+f = fib(8)
+
+for n in f:
+    print(n)
+
