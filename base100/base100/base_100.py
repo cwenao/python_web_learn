@@ -127,3 +127,12 @@ a= [1,2,3,4,5,6]
 b=a[:]
 
 print(b)
+
+# 8.题目：输出 9*9 乘法口诀表。
+def multiTable():
+    for x in range(1,10):
+        for y in range(1,x+1):
+            print("%d*%d=%2d" % (x,y,x*y),end=" ")
+        print(" ")
+
+multiTable()
