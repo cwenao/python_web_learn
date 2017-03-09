@@ -136,3 +136,13 @@ def multiTable():
         print(" ")
 
 multiTable()
+
+# 9. 暂停一秒输出
+
+import time
+def sleep_sec():
+    for n in range(0,10):
+        print(n)
+        time.sleep(1)
+
+sleep_sec()
