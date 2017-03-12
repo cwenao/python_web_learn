@@ -141,8 +141,19 @@ multiTable()
 
 import time
 def sleep_sec():
-    for n in range(0,10):
+    for n in range(0,2):
         print(n)
         time.sleep(1)
 
 sleep_sec()
+
+# 10. 暂停一秒输出，并格式化当前时间
+
+
+def sleep_and_format():
+    for n in range(0,10):
+        print(time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())))
+        time.sleep(1)
+
+
+sleep_and_format()
