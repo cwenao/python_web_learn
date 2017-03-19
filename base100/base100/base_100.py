@@ -157,3 +157,74 @@ def sleep_and_format():
 
 
 sleep_and_format()
+
+# 11. 题目：古典问题：有一对兔子，从出生后第3个月起每个月都生一对兔子，小兔子长到第三个月后每个月又生一对兔子，假如兔子都不死，问每个月的兔子总数为多少？
+# 题目实际是斐波那契数列： 1,1,2,3,5,8
+
+def fib_seq(month):
+    n,a,b = 0,0,1
+    while n < month:
+        yield b
+        a,b = b,a+b
+        n=n+1
+
+    return 'done'
+
+f = fib_seq(10)
+
+for n in f:
+    print(n)
+
+# 12. 判断101-200之间有多少个素数，并输出所有素数。
+# 素数的判别方法,改成从2开始输出素数
+
+#判断是否是素数
+def not_divisible(n):
+    return lambda x: x%n>0
+
+#每次生成下一个数
+def oddIter():
+    n=1
+    while True:
+        n=n+2
+        yield n
+
+def primes():
+    yield 2
+    odd = oddIter()
+    while True:
+        n = next(odd)
+        yield n
+        odd = filter(not_divisible(n),odd)
+
+for i in primes():
+    if i<100:
+        print(i)
+    else:
+        break
+
+
+# 13 题目：打印出所有的"水仙花数"，所谓"水仙花数"是指一个三位数，
+# 其各位数字立方和等于该数本身。例如：153是一个"水仙花数"，因为153=1的三次方＋5的三次方＋3的三次方。
+
+def nextNum():
+    n = 99
+    while True:
+        n = n+1
+        if (n>1000):
+            return 'done'
+        yield n
+
+def isnarcissitic():
+    return lambda x : (pow(int(str(x)[0]),3)+pow(int(str(x)[1]),3)+pow(int(str(x)[2]),3)) == x
+
+def narcissitics():
+    nextN = nextNum()
+    print(nextN)
+    while True:
+        nar = filter(isnarcissitic(),nextN)
+        yield next(nar)
+
+
+for i in narcissitics():
+   print(i)
