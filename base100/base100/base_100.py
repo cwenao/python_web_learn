@@ -145,7 +145,7 @@ def sleep_sec():
         print(n)
         time.sleep(1)
 
-sleep_sec()
+# sleep_sec()
 
 # 10. 暂停一秒输出，并格式化当前时间
 
@@ -156,7 +156,7 @@ def sleep_and_format():
         time.sleep(1)
 
 
-sleep_and_format()
+# sleep_and_format()
 
 # 11. 题目：古典问题：有一对兔子，从出生后第3个月起每个月都生一对兔子，小兔子长到第三个月后每个月又生一对兔子，假如兔子都不死，问每个月的兔子总数为多少？
 # 题目实际是斐波那契数列： 1,1,2,3,5,8
@@ -170,10 +170,10 @@ def fib_seq(month):
 
     return 'done'
 
-f = fib_seq(10)
-
-for n in f:
-    print(n)
+# f = fib_seq(10)
+#
+# for n in f:
+#     print(n)
 
 # 12. 判断101-200之间有多少个素数，并输出所有素数。
 # 素数的判别方法,改成从2开始输出素数
@@ -197,11 +197,11 @@ def primes():
         yield n
         odd = filter(not_divisible(n),odd)
 
-for i in primes():
-    if i<100:
-        print(i)
-    else:
-        break
+# for i in primes():
+#     if i<100:
+#         print(i)
+#     else:
+#         break
 
 
 # 13 题目：打印出所有的"水仙花数"，所谓"水仙花数"是指一个三位数，
@@ -220,11 +220,24 @@ def isnarcissitic():
 
 def narcissitics():
     nextN = nextNum()
-    print(nextN)
     while True:
         nar = filter(isnarcissitic(),nextN)
         yield next(nar)
 
 
-for i in narcissitics():
-   print(i)
+# for i in narcissitics():
+#    print(i)
+
+# 14. 将一个正整数分解质因数。例如：输入90,打印出90=2*3*3*5
+
+def reduceNum(n):
+    for x in range(2,n+1):
+        while n % x == 0:
+            yield x
+            n = n/x
+        x=x+1
+
+r = reduceNum(99)
+
+for x in r:
+    print(x)
