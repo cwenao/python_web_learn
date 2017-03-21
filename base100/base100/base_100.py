@@ -262,3 +262,35 @@ for x in f:
     print(x)
 
 
+# 16. 题目：输出指定格式的日期
+
+print(datetime.today().strftime('%d/%m/%Y'))
+
+# 星期
+print(datetime.now().strftime('%a'))
+print(datetime.now().strftime('%A'))
+
+# 星期中的第几天
+print(datetime.now().strftime('%w'))
+
+# 月份
+print(datetime.now().strftime('%b'))
+print(datetime.now().strftime('%B'))
+
+# 本地时间日期
+print(datetime.now().strftime('%c'))
+
+# 显示第几天
+print(datetime.now().strftime('%d'))
+
+# 小时 24 /12
+print(datetime.now().strftime('%H'))
+print(datetime.now().strftime('%I'))
+
+# 一年中的第几天
+print(datetime.now().strftime('%j'))
+
+# 第几周： 星期天为第一天/星期一为第一天
+
+print(datetime.now().strftime('%U'))
+print(datetime.now().strftime('%W'))
