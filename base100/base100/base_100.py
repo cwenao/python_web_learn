@@ -294,3 +294,7 @@ print(datetime.now().strftime('%j'))
 
 print(datetime.now().strftime('%U'))
 print(datetime.now().strftime('%W'))
+
+#  格式化输入的字符串
+
+print(datetime.strptime('2017-9-22 03:02:12','%Y-%m-%d %H:%M:%S'))
