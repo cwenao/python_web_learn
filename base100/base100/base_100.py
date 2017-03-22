@@ -296,5 +296,28 @@ print(datetime.now().strftime('%U'))
 print(datetime.now().strftime('%W'))
 
 #  格式化输入的字符串
-
 print(datetime.strptime('2017-9-22 03:02:12','%Y-%m-%d %H:%M:%S'))
+
+# 17. 输入一行字符，分别统计出其中英文字母、空格、数字和其它字符的个数
+
+counts=[0,0,0,0]
+
+def countWords(words):
+    if words == None:
+        return 0
+    for x in words:
+        if x.isalpha():
+            counts[0] = counts[0]+1
+        elif x.isspace():
+            counts[1] = counts[1]+1
+        elif x.isdigit():
+            counts[2] = counts[2]+1
+        else:
+            counts[3] = counts[3]+1
+    return counts
+inputwords = input()
+
+f = countWords(inputwords)
+
+for s in f:
+    print(s)
