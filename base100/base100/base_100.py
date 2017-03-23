@@ -340,3 +340,22 @@ for x in f:
     print('this is sumx %d ' % (sumx))
 
 
+
+#19 一个数如果恰好等于它的因子之和，这个数就称为"完数"。例如6=1＋2＋3.编程找出1000以内的所有完数。
+
+def factorNum(num):
+
+    for x in range(2,num+1):
+        nn = 0
+        for i in range(1,x):
+            if x % i ==0:
+                nn= nn+i
+        if nn == x:
+            yield nn
+
+
+
+f = factorNum(1000)
+
+for m in f:
+    print(m)
