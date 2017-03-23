@@ -315,9 +315,28 @@ def countWords(words):
         else:
             counts[3] = counts[3]+1
     return counts
-inputwords = input()
+# inputwords = input()
+#
+# f = countWords(inputwords)
+#
+# for s in f:
+#     print(s)
 
-f = countWords(inputwords)
+#18 题目：求s=a+aa+aaa+aaaa+aa...a的值，其中a是一个数字。例如2+22+222+2222+22222(此时共有5个数相加)，几个数相加有键盘控制。
 
-for s in f:
-    print(s)
+def multipleNum(primitive,num,count):
+    while count>0:
+        yield num
+        num = (num*10+primitive)
+        count = count-1
+
+
+f = multipleNum(2,2,3)
+
+sumx = 0
+for x in f:
+    print('this is x %d ' % (x))
+    sumx = sumx+x
+    print('this is sumx %d ' % (sumx))
+
+
