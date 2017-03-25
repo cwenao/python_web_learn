@@ -359,3 +359,22 @@ f = factorNum(1000)
 
 for m in f:
     print(m)
+
+
+#20 一球从100米高度自由落下，每次落地后反跳回原高度的一半；再落下，求它在第10次落地时，共经过多少米？第10次反弹多高？
+
+down =[]
+kick_back = []
+
+def calculate_distance(frequency,initHeight):
+    n=0
+    while n< frequency:
+        down.append(initHeight)
+        initHeight = initHeight/2
+        kick_back.append(initHeight)
+        n = n+1
+
+calculate_distance(10,100)
+
+print('total distance: %s ' % format(sum(down)))
+print('total kick_back: %s ' % format(kick_back[-1]))
