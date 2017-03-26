@@ -378,3 +378,21 @@ calculate_distance(10,100)
 
 print('total distance: %s ' % format(sum(down)))
 print('total kick_back: %s ' % format(kick_back[-1]))
+
+# 21 猴子吃桃问题：猴子第一天摘下若干个桃子，当即吃了一半，还不瘾，又多吃了一个第二天早上又将剩下的桃子吃掉一半，又多吃了一个。
+# 以后每天早上都吃了前一天剩下的一半零一个。到第10天早上想再吃时，见只剩下一个桃子了。求第一天共摘了多少。
+
+
+def sumFirstDay(days):
+    n = 1
+    while days>0:
+        yield n
+        n = (n+1)*2
+        days = days-1
+
+f= sumFirstDay(10)
+
+for x in f:
+    print('this is the day %d' % x)
+
+
