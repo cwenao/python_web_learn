@@ -406,3 +406,35 @@ for i in range(ord('x'),ord('z') + 1):
                 if (i != k) and (j != k):
                     if (i != ord('x')) and (k != ord('x')) and (k != ord('z')):
                         print('order is a -- %s\t b -- %s\tc--%s' % (chr(i),chr(j),chr(k)))
+
+
+# 23 打印出如下图案（菱形）:
+#*
+#***
+#*****
+#*******
+#*****
+#***
+#*
+#思路 stdout
+
+from sys import stdout
+
+def printImage(num):
+    printNum = int(num / 2)
+    for i in range(printNum +1):
+        for j in range(printNum + 1 -i):
+            stdout.write(' ')
+
+        for k in range(2*i+1):
+            stdout.write('*')
+        print()
+
+    for i in range(printNum):
+        for j in range(i + 2):
+            stdout.write(' ')
+        for k in range(printNum + 2 -2*i):
+            stdout.write('*')
+        print()
+
+printImage(7)
