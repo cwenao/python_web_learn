@@ -438,3 +438,18 @@ def printImage(num):
         print()
 
 printImage(7)
+
+# 有一分数序列：2/1，3/2，5/3，8/5，13/8，21/13...求出这个数列的前20项之和。
+
+l =[]
+def elementSum(endNum,initE,initD):
+    for i in range(1,endNum+1):
+        yield initE / initD
+        initE,initD = initE+initD,initE
+
+
+l = elementSum(20,1.0,2.0)
+s=0.0
+for x in l:
+    s = s+x
+    print(s)
