@@ -453,3 +453,19 @@ s=0.0
 for x in l:
     s = s+x
     print(s)
+
+
+#25 求1+2!+3!+...+20!的和
+#map的用法
+
+l= range(1,21)
+
+def sumFactor(num):
+
+    r = 1
+
+    for x in range(1,num+1):
+        r *= x
+    return r
+
+print('this is the sumfor factor %s' % sum(map(sumFactor,l)))
