@@ -469,3 +469,18 @@ def sumFactor(num):
     return r
 
 print('this is the sumfor factor %s' % sum(map(sumFactor,l)))
+
+
+#26 利用递归方法求5!利用递归方法求5!
+
+def factNum(num):
+
+    sumN  =0
+    if num == 0:
+        sum =1
+    else:
+        sum = num * factNum(num-1)
+
+    return sumN
+
+factNum(5)
