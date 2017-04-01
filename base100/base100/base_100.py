@@ -484,3 +484,19 @@ def factNum(num):
     return sumN
 
 factNum(5)
+
+
+# 27 利用递归函数调用方式，将所输入的5个字符，以相反顺序打印出来。
+
+def outprint(inputstr,lengh):
+    if lengh == 0:
+        return
+    print(inputstr[lengh-1])
+    outprint(inputstr, lengh-1)
+
+s =  input('please input the string: ')
+
+l= len(s)
+
+outprint(s,l)
+
