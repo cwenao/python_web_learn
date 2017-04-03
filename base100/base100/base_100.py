@@ -494,11 +494,11 @@ def outprint(inputstr,lengh):
     print(inputstr[lengh-1])
     outprint(inputstr, lengh-1)
 
-s =  input('please input the string: ')
-
-l= len(s)
-
-outprint(s,l)
+# s =  input('please input the string: ')
+#
+# l= len(s)
+#
+# outprint(s,l)
 
 # 28：有5个人坐在一起，问第五个人多少岁？他说比第4个人大2岁。
 # 问第4个人岁数，他说比第3个人大2岁。问第三个人，又说比第2人大两岁。
@@ -514,4 +514,20 @@ def ageNum(n):
 
 print(ageNum(5))
 
+
+#29 给一个不多于5位的正整数，要求：一、求它是几位数，二、逆序打印出各位数字。
+
+def resolve(n):
+    nl = len(str(n))
+    dec = pow(10,nl-1)
+    print('this is the num: ',nl)
+    while nl > 0:
+        yield int(n / dec)
+        n = n % dec
+        dec = int(dec/10)
+        nl = nl - 1
+
+
+for x in resolve(12345678):
+    print(x)
 
