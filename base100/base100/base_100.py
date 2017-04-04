@@ -531,3 +531,17 @@ def resolve(n):
 for x in resolve(12345678):
     print(x)
 
+# 30 题目：一个5位数，判断它是不是回文数。即12321是回文数，个位与万位相同，十位与千位相同。
+
+def plalindrome(num):
+    m = str(num)
+    for x in range(int(len(m)/2)):
+        if m[x] != m[-x-1]:
+            return False
+    return m
+
+
+xx = plalindrome(123211)
+
+print('this is the plaidrome: ',xx)
+
