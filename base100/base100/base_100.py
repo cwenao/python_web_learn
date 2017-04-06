@@ -558,3 +558,14 @@ def ifelif(doSomething):
         print('this is nothing ----------------->')
 
 ifelif('b')
+
+
+# 32 按相反的顺序输出列表的值。
+
+def opposite(num):
+    for x in num[::-1]:
+        print('this is the x : ',x)
+
+a = ['a','b','c']
+
+opposite(a)
