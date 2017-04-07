@@ -569,3 +569,11 @@ def opposite(num):
 a = ['a','b','c']
 
 opposite(a)
+
+# 33 题目：按逗号分隔列表。
+
+L = ['a','b','c']
+
+s1 = ','.join(str(x) for x in  L)
+
+print(s1)
