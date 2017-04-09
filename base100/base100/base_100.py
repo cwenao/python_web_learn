@@ -564,16 +564,28 @@ ifelif('b')
 
 def opposite(num):
     for x in num[::-1]:
-        print('this is the x : ',x)
+        print('this is the x : ', x)
 
-a = ['a','b','c']
+a = ['a', 'b', 'c']
 
 opposite(a)
 
 # 33 题目：按逗号分隔列表。
 
-L = ['a','b','c']
+L = ['a', 'b', 'c']
 
 s1 = ','.join(str(x) for x in  L)
 
 print(s1)
+
+# 34 练习函数调用。
+
+def print_words(words):
+    print('this is the words: %s ' % words)
+    return words
+
+def do_print():
+    for x in range(5):
+        print_words(str(x)+'abc')
+
+do_print()
