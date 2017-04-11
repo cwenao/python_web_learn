@@ -604,4 +604,14 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
-print (bcolors.WARNING + "警告的颜色字体?" + bcolors.ENDC)
+print(bcolors.WARNING + "警告的颜色字体?" + bcolors.ENDC)
+
+
+# 36 题目：求100之内的素数。
+# #12 已经写过素数的函数 直接用
+
+for i in primes():
+    if i < 100:
+        print(i)
+    else:
+        break
