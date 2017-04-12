@@ -615,3 +615,20 @@ for i in primes():
         print(i)
     else:
         break
+
+
+# 37 题目：对10个数进行排序。
+
+def bubbing_sort(sort_array):
+    for xkey, xvalue in enumerate(sort_array):
+        for ykey,yvalue in enumerate(sort_array):
+            if xvalue > yvalue:
+                sort_array[ykey], sort_array[xkey] = sort_array[xkey], sort_array[ykey]
+    return sort_array
+
+l = [10, 8, 20, 4, 2, 1, 66]
+
+f = bubbing_sort(l)
+
+for x in f:
+    print(x)
