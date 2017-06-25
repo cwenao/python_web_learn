@@ -646,4 +646,4 @@ def duijiao():
         sum += a[i][i]
     print(sum)
 
-duijiao()
+#duijiao()
