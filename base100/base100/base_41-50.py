@@ -42,3 +42,28 @@ def matrix_plus():
 matrix_plus()
 for x in Z:
     print('this is the matrix plus: ', x)
+
+
+#45 统计 1 到 100 之和
+
+def sum_count():
+    n = 1
+    m =100
+    tmp = (m+n) * (m-n +1)/2
+    print("this is the sum 1-100: %d" % (tmp))
+
+sum_count()
+
+print("To use the sum function, the sum is %d" %(sum(range(1,101))))
+
+
+#46 求输入数字的平方，如果平方运算后小于 50 则退出
+
+import math
+
+def power_count(x):
+    print('this is the x: %d' % x)
+    x = math.pow(x,2)
+    print('this is the pow: %d' % x)
+
+power_count(5)
