@@ -67,3 +67,42 @@ def power_count(x):
     print('this is the pow: %d' % x)
 
 power_count(5)
+
+#47 两个变量值互换
+
+def exchange(a,b):
+    a,b = b,a
+    return (a,b)
+
+a = 10
+b = 5
+
+a,b = exchange(a, b)
+
+print('this is the a : %d ,and this is the b: %d' %(a, b))
+
+#48 数字比较
+
+def compareToNum(a,b):
+    if a > b:
+        return 1
+    elif a == b:
+        return 0
+    else:
+        return -1
+
+re = compareToNum(5, 10)
+
+print('the compare result is : %d' % re)
+
+#49 使用lambda来创建匿名函数。
+
+MAXIMUM = lambda x, y : (x > y) * x + (x < y) * y
+
+print('the largar one is ：%d ' % MAXIMUM(10, 30))
+
+#50 使用 random 模块
+
+import random
+
+print('the random number is :%d' % random.uniform(1, 50))
