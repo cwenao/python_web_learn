@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+
 # 练习题来自于菜鸟教程
 # http://www.runoob.com/python/python-exercise-example1.html
 
