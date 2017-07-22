@@ -35,4 +35,5 @@ def execute_query_sql(sql):
         con.close()
 
 data = execute_query_sql("select version()")
+
 print('Database version %s ' % data)
