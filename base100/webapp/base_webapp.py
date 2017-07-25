@@ -1,5 +1,5 @@
 import logging
-import asyncio,os,json,time
+import asyncio, os, json, time
 
 from aiohttp import web
 
@@ -7,7 +7,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 
 def index(request):
-    return web.Response(body=b'<h1>good good study, day day up</h1>')
+    return web.Response(body=b'<h1>good good study, day day up</h1>', content_type='text/html')
 
 
 @asyncio.coroutine
