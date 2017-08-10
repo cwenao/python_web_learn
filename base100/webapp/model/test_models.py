@@ -1,13 +1,6 @@
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, INTEGER, String
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-import logging; logging.basicConfig(level=logging.INFO)
-
-ENGINE = create_engine("mysql+pymysql://root:123456@172.16.223.10:3306/pythontest?charset=utf8", max_overflow=5)
-
-Session = sessionmaker(bind=ENGINE)
-session = Session()
+from base100.crawler import db_operation
 
 
 Base = declarative_base()
@@ -27,8 +20,10 @@ class UserInfo(Base):
 
 
 def insert():
-    user_info = UserInfo(id=1,name='a啊啊啊啊',status=1)
+    user_info = UserInfo(id=2,name='你好',status=1)
+    session = db_operation.get_session()
     session.add(user_info)
     session.commit()
+
 
 insert()
