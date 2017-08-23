@@ -1,5 +1,7 @@
 from urllib import request
 import re
+from base100.crawler.model import model
+from base100.crawler import db_operation
 
 
 def data_capture_common(target_url, pat):
@@ -15,7 +17,7 @@ def data_capture_common(target_url, pat):
     return resolver_concent
 
 
-def data_douban_movie_list():
+def data_douban_provider_list():
     '''
     豆瓣电影列表
     :return:
@@ -23,9 +25,12 @@ def data_douban_movie_list():
     target_url = 'https://read.douban.com/provider/all'
     pat = '<div class="name">(.*?)</div>'
     ret = data_capture_common(target_url, pat)
-    for x in ret:
-        print(x)
+    session = db_operation.get_session()
+    session.execute(model.ProviderInfo.__table__.insert(), [{'provider_name': x} for x in ret])
+    session.commit()
+
+
 
 
 if __name__ == '__main__':
-    data_douban_movie_list()
+    data_douban_provider_list()

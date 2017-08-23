@@ -9,7 +9,7 @@ Base = declarative_base()
 class UserInfo(Base):
     __tablename__ = 'user_info'
 
-    id = Column(INTEGER, primary_key=True)
+    id = Column(INTEGER, primary_key=True, autoincrement=True)
     name = Column(String(32))
     passwd = Column(String(128))
     age = Column(INTEGER)
@@ -20,7 +20,7 @@ class UserInfo(Base):
 
 
 def insert():
-    user_info = UserInfo(id=2,name='你好',status=1)
+    user_info = UserInfo(name='我们大家好，你如何',status=1)
     session = db_operation.get_session()
     session.add(user_info)
     session.commit()

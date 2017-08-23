@@ -14,3 +14,7 @@ def get_session():
     return session
 
 
+def get_engine():
+    return ENGINE
+
+
