@@ -31,6 +31,8 @@ def data_douban_provider_list():
     session.commit()
 
 
+
+
 def data_multi_douban_provider_list():
     '''
     多线程
@@ -45,6 +47,8 @@ def data_multi_douban_provider_list():
     session.commit()
     pool.close()
     pool.join()
+
+
 
 
 if __name__ == '__main__':
